@@ -1,0 +1,16 @@
+<%= link_to("Back to List", books_path, class: 'back-link') %>
+
+<div class="books edit">
+  <h2>Edit Book</h2>
+
+  <%= form_for(@book) do |f| %>
+    <% # url: book_path(@book), method: 'patch' %>
+
+    <%= render(partial: 'form', locals: {f: f}) %>
+
+    <div class="form-buttons">
+      <%= f.submit("Edit Book") %>
+    </div>
+
+  <% end %>
+</div>

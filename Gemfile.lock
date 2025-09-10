@@ -90,6 +90,7 @@ GEM
     debug (1.11.0)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    diff-lcs (1.6.2)
     erb (4.0.4)
       cgi (>= 0.3.3)
     erubi (1.10.0)
@@ -187,6 +188,23 @@ GEM
     reline (0.6.2)
       io-console (~> 0.5)
     rexml (3.2.5)
+    rspec-core (3.13.5)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.5)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.5)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-rails (7.1.1)
+      actionpack (>= 7.0)
+      activesupport (>= 7.0)
+      railties (>= 7.0)
+      rspec-core (~> 3.13)
+      rspec-expectations (~> 3.13)
+      rspec-mocks (~> 3.13)
+      rspec-support (~> 3.13)
+    rspec-support (3.13.5)
     rubyzip (2.3.2)
     selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
@@ -241,6 +259,8 @@ DEPENDENCIES
   pg (~> 1.6)
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)
+  rexml
+  rspec-rails
   selenium-webdriver
   sprockets-rails
   stimulus-rails

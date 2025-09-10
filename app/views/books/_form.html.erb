@@ -1,3 +1,15 @@
+<!-- filepath: c:\csce431\book_collection\app\views\books\_form.html.erb -->
+<% if @book.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+    <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <table summary="Book form fields">
   <tr>
     <th>Title</th>
@@ -12,7 +24,9 @@
     <td><%= f.number_field(:price, step: 0.01) %></td>
   </tr>
   <tr>
-    <th>Published Date</th>
-    <td><%= f.date_select(:published_date) %></td>
-  </tr>
+  <th>Published Date</th>
+  <td>
+    <%= f.date_select(:published_date, start_year: 1900, end_year: Date.today.year + 5) %>
+  </td>
+</tr>
 </table>

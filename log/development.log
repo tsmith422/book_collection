@@ -4616,3 +4616,38 @@ Completed 200 OK in 122ms (Views: 94.1ms | ActiveRecord: 0.4ms | Allocations: 24
   [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(5796706365260502195)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.17.0.1 at 2025-09-15 17:17:44 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 92.5ms | Allocations: 713)
+  Rendered layout layouts/application.html.erb (Duration: 2652.5ms | Allocations: 33823)
+Completed 200 OK in 3050ms (Views: 2761.4ms | ActiveRecord: 0.0ms | Allocations: 39825)
+
+
+Started GET "/books?page=1" for 172.17.0.1 at 2025-09-15 17:17:52 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (8.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in `each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 150.7ms | Allocations: 2249)
+  Rendered layout layouts/application.html.erb (Duration: 338.9ms | Allocations: 3768)
+Completed 200 OK in 622ms (Views: 340.7ms | ActiveRecord: 8.9ms | Allocations: 5897)
+
+
+Started GET "/books/new" for 172.17.0.1 at 2025-09-15 17:17:54 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 373.7ms | Allocations: 6617)
+  Rendered books/new.html.erb within layouts/application (Duration: 489.3ms | Allocations: 7857)
+  Rendered layout layouts/application.html.erb (Duration: 587.4ms | Allocations: 9290)
+Completed 200 OK in 731ms (Views: 589.6ms | ActiveRecord: 22.0ms | Allocations: 26679)
+
+

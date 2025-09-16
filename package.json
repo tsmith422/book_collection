@@ -14,6 +14,8 @@
         "esbuild": "^0.25.9"
     },
     "dependencies": {
+        "@hotwired/stimulus": "^3.2.2",
+        "@hotwired/turbo-rails": "^8.0.16",
         "@tailwindcss/cli": "^4.1.13",
         "esbuild": "^0.25.9",
         "tailwindcss": "^4.1.13"

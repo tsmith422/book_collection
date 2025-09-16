@@ -1,19 +1,16 @@
 {
     "stack": "heroku-24",
-    "addons": [
-        "heroku-postgresql:in-dyno"
-    ],
     "environments": {
         "review": {
             "addons": [
                 "heroku-postgresql:in-dyno"
             ],
-            "scripts": {
-                "postdeploy": "bundle exec rails db:schema:load"
-            },
             "env": {
                 "RAILS_ENV": "review",
                 "DISABLE_DATABASE_ENVIRONMENT_CHECK": "1"
+            },
+            "scripts": {
+                "postdeploy": "bundle exec rails db:schema:load && yarn build && yarn build:css"
             }
         }
     },
@@ -26,7 +23,12 @@
         }
     ],
     "env": {
+        "RAILS_LOG_TO_STDOUT": "1",
+        "RAILS_SERVE_STATIC_FILES": "true",
         "NODE_ENV": "production",
         "YARN_PRODUCTION": "true"
-    }
+    },
+    "addons": [
+        "heroku-postgresql:in-dyno"
+    ]
 }

@@ -25,7 +25,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
+gem "jbuilder", "~> 2.7"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -75,3 +75,7 @@ end
 
 gem 'concurrent-ruby', '1.3.5'
 gem "pg", "~> 1.1"
+
+# jsbundler gems
+gem "jsbundling-rails"
+gem "cssbundling-rails"

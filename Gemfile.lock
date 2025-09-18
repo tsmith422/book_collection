@@ -265,6 +265,9 @@ GEM
     ruby-progressbar (1.13.0)
     rubyzip (3.1.0)
     securerandom (0.4.1)
+    seed_dump (3.3.1)
+      activerecord (>= 4)
+      activesupport (>= 4)
     selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -327,6 +330,7 @@ DEPENDENCIES
   rexml
   rspec-rails
   rubocop
+  seed_dump
   selenium-webdriver
   stimulus-rails
   turbo-rails

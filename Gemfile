@@ -79,3 +79,6 @@ gem "pg", "~> 1.1"
 # jsbundler gems
 gem "jsbundling-rails"
 gem "cssbundling-rails"
+
+# seed gems
+gem 'seed_dump'

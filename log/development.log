@@ -7687,3 +7687,2343 @@ Processing by UserBooksController#index as HTML
 Completed 200 OK in 155ms (Views: 114.1ms | ActiveRecord: 2.8ms | Allocations: 5409)
 
 
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+Started GET "/" for 172.17.0.1 at 2025-09-16 20:32:18 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::NoDatabaseError (We could not find your database: task_manager_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+)
+Caused by: PG::ConnectionBad (connection to server at "::1", port 5432 failed: FATAL:  database "task_manager_development" does not exist
+)
+
+Information for: ActiveRecord::NoDatabaseError (We could not find your database: task_manager_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+  
+activerecord (8.0.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:63:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter.new_client'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:939:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#connect'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:951:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#reconnect'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:667:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activesupport (8.0.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:666:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:771:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activesupport (8.0.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:761:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:779:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#connect!'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:985:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activesupport (8.0.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:984:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_string'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in 'ActiveRecord::ConnectionAdapters::Quoting#quote'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#quoted_scope'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#data_source_sql'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in 'ActiveRecord::ConnectionAdapters::SchemaStatements#table_exists?'
+activerecord (8.0.2.1) lib/active_record/schema_migration.rb:55:in 'block in ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:418:in 'ActiveRecord::ConnectionAdapters::ConnectionPool#with_connection'
+activerecord (8.0.2.1) lib/active_record/schema_migration.rb:54:in 'ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.2.1) lib/active_record/migration.rb:1431:in 'ActiveRecord::Migrator#initialize'
+activerecord (8.0.2.1) lib/active_record/migration.rb:1279:in 'Class#new'
+activerecord (8.0.2.1) lib/active_record/migration.rb:1279:in 'ActiveRecord::MigrationContext#open'
+activerecord (8.0.2.1) lib/active_record/migration.rb:763:in 'block (2 levels) in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2.1) lib/active_record/migration/pending_migration_connection.rb:8:in 'ActiveRecord::PendingMigrationConnection.with_temporary_pool'
+activerecord (8.0.2.1) lib/active_record/migration.rb:762:in 'block in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2.1) lib/active_record/migration.rb:761:in 'Array#each'
+activerecord (8.0.2.1) lib/active_record/migration.rb:761:in 'ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2.1) lib/active_record/migration.rb:740:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.2.1) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.2.1) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.2.1) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.2.1) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.2.1) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2.1) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in 'Sprockets::Rails::QuietAssets#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.1) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.1) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.1) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.1) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.1) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+
+Information for cause: PG::ConnectionBad (connection to server at "::1", port 5432 failed: FATAL:  database "task_manager_development" does not exist
+):
+  
+pg-1.6.2-x86_64 (linux) lib/pg/connection.rb:751:in 'PG::Connection::Pollable#polling_loop'
+pg-1.6.2-x86_64 (linux) lib/pg/connection.rb:795:in 'PG::Connection#async_connect_or_reset'
+pg-1.6.2-x86_64 (linux) lib/pg/connection.rb:951:in 'PG::Connection.connect_to_hosts'
+pg-1.6.2-x86_64 (linux) lib/pg/connection.rb:871:in 'PG::Connection.new'
+pg-1.6.2-x86_64 (linux) lib/pg.rb:88:in 'PG.connect'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:58:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter.new_client'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:939:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#connect'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:951:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#reconnect'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:667:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activesupport (8.0.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:666:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:771:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activesupport (8.0.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:761:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:779:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#connect!'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:985:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activesupport (8.0.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:984:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_string'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in 'ActiveRecord::ConnectionAdapters::Quoting#quote'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#quoted_scope'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#data_source_sql'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in 'ActiveRecord::ConnectionAdapters::SchemaStatements#table_exists?'
+activerecord (8.0.2.1) lib/active_record/schema_migration.rb:55:in 'block in ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:418:in 'ActiveRecord::ConnectionAdapters::ConnectionPool#with_connection'
+activerecord (8.0.2.1) lib/active_record/schema_migration.rb:54:in 'ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.2.1) lib/active_record/migration.rb:1431:in 'ActiveRecord::Migrator#initialize'
+activerecord (8.0.2.1) lib/active_record/migration.rb:1279:in 'Class#new'
+activerecord (8.0.2.1) lib/active_record/migration.rb:1279:in 'ActiveRecord::MigrationContext#open'
+activerecord (8.0.2.1) lib/active_record/migration.rb:763:in 'block (2 levels) in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2.1) lib/active_record/migration/pending_migration_connection.rb:8:in 'ActiveRecord::PendingMigrationConnection.with_temporary_pool'
+activerecord (8.0.2.1) lib/active_record/migration.rb:762:in 'block in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2.1) lib/active_record/migration.rb:761:in 'Array#each'
+activerecord (8.0.2.1) lib/active_record/migration.rb:761:in 'ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2.1) lib/active_record/migration.rb:740:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.2.1) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.2.1) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.2.1) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.2.1) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.2.1) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2.1) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in 'Sprockets::Rails::QuietAssets#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.1) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.1) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.1) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.1) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.1) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started POST "/rails/actions" for 172.17.0.1 at 2025-09-16 20:32:29 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35mSQL (2.4ms)[0m  [1m[35mSET search_path TO public[0m
+  [1m[35m (1992.3ms)[0m  [1m[35mCREATE DATABASE "task_manager_development" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mSET search_path TO public[0m
+  [1m[35m (178.2ms)[0m  [1m[35mCREATE DATABASE "task_manager_test" ENCODING = 'unicode'[0m
+Started GET "/" for 172.17.0.1 at 2025-09-16 20:32:31 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (15.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 7 pending migrations:
+
+db/migrate/20220422190648_do_nothing_yet.rb
+db/migrate/20220422190749_create_tasks.rb
+db/migrate/20220425152907_create_categories.rb
+db/migrate/20220425152933_add_category_id_to_tasks.rb
+db/migrate/20250909170518_create_books.rb
+db/migrate/20250916004643_create_users.rb
+db/migrate/20250916004937_create_user_books.rb
+
+
+):
+  
+activerecord (8.0.2.1) lib/active_record/migration.rb:743:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.2.1) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.2.1) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.2.1) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.2.1) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.2.1) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2.1) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in 'Sprockets::Rails::QuietAssets#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.1) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.1) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.1) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.1) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.1) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started POST "/rails/actions" for 172.17.0.1 at 2025-09-16 20:32:35 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5796706365260502195)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (3.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-16 20:32:35.608206', '2025-09-16 20:32:35.608211') RETURNING "key"[0m
+Migrating to DoNothingYet (20220422190648)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (4.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20220422190648') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTasks (20220422190749)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" bigserial primary key, "name" character varying, "description" text, "position" integer, "completed" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20220422190749') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20220425152907)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20220425152907') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCategoryIdToTasks (20220425152933)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.7ms)[0m  [1m[35mALTER TABLE "tasks" ADD "category_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20220425152933') RETURNING "version"[0m
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBooks (20250909170518)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "author" character varying, "price" decimal, "published_date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250909170518') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20250916004643)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250916004643') RETURNING "version"[0m
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUserBooks (20250916004937)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "user_books" ("id" bigserial primary key, "user_id" integer, "book_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250916004937') RETURNING "version"[0m
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5796706365260502195)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.17.0.1 at 2025-09-16 20:32:36 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (1.1ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  Rendered user_books/index.html.erb within layouts/application (Duration: 22.7ms | GC: 1.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 5670.7ms | GC: 48.0ms)
+Completed 200 OK in 6558ms (Views: 5701.1ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 50.2ms)
+
+
+Started GET "/user_books/new" for 172.17.0.1 at 2025-09-16 20:32:47 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/books" for 172.17.0.1 at 2025-09-16 20:32:47 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/new.html.erb within layouts/application
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:16:in 'Enumerable#map'
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:21:in 'Enumerable#map'
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered user_books/_form.html.erb (Duration: 933.3ms | GC: 33.3ms)
+  Rendered user_books/new.html.erb within layouts/application (Duration: 968.9ms | GC: 35.0ms)
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 92.9ms | GC: 1.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 149.9ms | GC: 1.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1038.4ms | GC: 36.0ms)
+Completed 200 OK in 587ms (Views: 266.0ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 10.1ms)
+
+
+Completed 200 OK in 1135ms (Views: 1035.5ms | ActiveRecord: 11.2ms (2 queries, 0 cached) | GC: 56.6ms)
+
+
+Started GET "/books/new" for 172.17.0.1 at 2025-09-16 20:32:49 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 97.8ms | GC: 0.5ms)
+  Rendered books/new.html.erb within layouts/application (Duration: 124.3ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 213.4ms | GC: 0.5ms)
+Completed 200 OK in 267ms (Views: 215.1ms | ActiveRecord: 1.6ms (0 queries, 0 cached) | GC: 1.0ms)
+
+
+Started POST "/books" for 172.17.0.1 at 2025-09-16 20:32:55 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "book" => {"title" => "TEst book", "author" => "", "price" => "", "published_date(1i)" => "2025", "published_date(2i)" => "9", "published_date(3i)" => "16"}, "commit" => "Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 3.8ms | GC: 0.3ms)
+  Rendered books/new.html.erb within layouts/application (Duration: 8.0ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 133.5ms | GC: 0.3ms)
+Completed 200 OK in 172ms (Views: 135.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+Started POST "/books" for 172.17.0.1 at 2025-09-16 20:32:59 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "book" => {"title" => "TEst book", "author" => "me", "price" => "10", "published_date(1i)" => "2025", "published_date(2i)" => "9", "published_date(3i)" => "16"}, "commit" => "Create Book"}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:18:in 'BooksController#create'
+  [1m[36mBook Create (5.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "TEst book"], ["author", "me"], ["price", "10.0"], ["published_date", "2025-09-16"], ["created_at", "2025-09-16 20:32:59.912470"], ["updated_at", "2025-09-16 20:32:59.912470"]]
+  ↳ app/controllers/books_controller.rb:18:in 'BooksController#create'
+  [1m[36mTRANSACTION (25.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:18:in 'BooksController#create'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 80ms (ActiveRecord: 32.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 172.17.0.1 at 2025-09-16 20:32:59 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 231.2ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 326.3ms | GC: 0.4ms)
+Completed 200 OK in 369ms (Views: 326.9ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/user_books" for 172.17.0.1 at 2025-09-16 20:33:02 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (0.6ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  Rendered user_books/index.html.erb within layouts/application (Duration: 7.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 106.8ms | GC: 0.2ms)
+Completed 200 OK in 132ms (Views: 108.0ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books" for 172.17.0.1 at 2025-09-16 20:33:03 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/user_books/new" for 172.17.0.1 at 2025-09-16 20:33:04 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 10.6ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 109.0ms | GC: 0.5ms)
+Completed 200 OK in 158ms (Views: 110.3ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Processing by UserBooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:16:in 'Enumerable#map'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:21:in 'Enumerable#map'
+  Rendered user_books/_form.html.erb (Duration: 9.6ms | GC: 0.0ms)
+  Rendered user_books/new.html.erb within layouts/application (Duration: 12.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 89.5ms | GC: 0.3ms)
+Completed 200 OK in 118ms (Views: 89.7ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books" for 172.17.0.1 at 2025-09-16 20:33:04 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/users" for 172.17.0.1 at 2025-09-16 20:33:05 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 8.4ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 80.0ms | GC: 1.1ms)
+Completed 200 OK in 120ms (Views: 80.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 21.2ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 154.7ms | GC: 0.2ms)
+Completed 200 OK in 247ms (Views: 162.8ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/user_books" for 172.17.0.1 at 2025-09-16 20:33:06 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (0.7ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  Rendered user_books/index.html.erb within layouts/application (Duration: 6.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 75.8ms | GC: 0.0ms)
+Completed 200 OK in 103ms (Views: 76.3ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/new" for 172.17.0.1 at 2025-09-16 20:33:08 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 12.1ms | GC: 0.0ms)
+  Rendered users/new.html.erb within layouts/application (Duration: 42.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 108.5ms | GC: 0.0ms)
+Completed 200 OK in 164ms (Views: 109.8ms | ActiveRecord: 1.6ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users" for 172.17.0.1 at 2025-09-16 20:33:12 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"username" => "Axolotl"}, "commit" => "Create User"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27:in 'block in UsersController#create'
+  [1m[36mUser Create (3.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "Axolotl"], ["created_at", "2025-09-16 20:33:12.701147"], ["updated_at", "2025-09-16 20:33:12.701147"]]
+  ↳ app/controllers/users_controller.rb:27:in 'block in UsersController#create'
+  [1m[36mTRANSACTION (14.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:27:in 'block in UsersController#create'
+Redirected to http://127.0.0.1:3000/users/1
+Completed 302 Found in 56ms (ActiveRecord: 18.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2025-09-16 20:33:12 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id" => "1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in 'UsersController#set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 14.1ms | GC: 0.0ms)
+  Rendered users/show.html.erb within layouts/application (Duration: 98.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 199.3ms | GC: 0.0ms)
+Completed 200 OK in 335ms (Views: 200.5ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for 172.17.0.1 at 2025-09-16 20:33:14 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 5.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 101.3ms | GC: 0.0ms)
+Completed 200 OK in 139ms (Views: 102.2ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_books" for 172.17.0.1 at 2025-09-16 20:33:16 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/books" for 172.17.0.1 at 2025-09-16 20:33:16 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (0.5ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  Rendered user_books/index.html.erb within layouts/application (Duration: 5.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 88.5ms | GC: 0.0ms)
+Completed 200 OK in 118ms (Views: 89.6ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 6.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 83.1ms | GC: 0.0ms)
+Completed 200 OK in 117ms (Views: 83.8ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_books" for 172.17.0.1 at 2025-09-16 20:33:17 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (0.8ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  Rendered user_books/index.html.erb within layouts/application (Duration: 7.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 70.3ms | GC: 0.0ms)
+Completed 200 OK in 95ms (Views: 70.7ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 172.17.0.1 at 2025-09-16 20:33:18 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/user_books/new" for 172.17.0.1 at 2025-09-16 20:33:18 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 6.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 120.0ms | GC: 0.0ms)
+Completed 200 OK in 158ms (Views: 120.7ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by UserBooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/new.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:16:in 'Enumerable#map'
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:21:in 'Enumerable#map'
+  Rendered user_books/_form.html.erb (Duration: 17.3ms | GC: 0.0ms)
+  Rendered user_books/new.html.erb within layouts/application (Duration: 19.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 176.8ms | GC: 0.0ms)
+Completed 200 OK in 245ms (Views: 176.8ms | ActiveRecord: 1.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/user_books" for 172.17.0.1 at 2025-09-16 20:33:22 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "user_book" => {"user_id" => "1", "book_id" => "1"}, "commit" => "Create User book"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_books_controller.rb:29:in 'block in UserBooksController#create'
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:29:in 'block in UserBooksController#create'
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:29:in 'block in UserBooksController#create'
+  [1m[36mUserBook Create (0.8ms)[0m  [1m[32mINSERT INTO "user_books" ("user_id", "book_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["book_id", 1], ["created_at", "2025-09-16 20:33:23.380878"], ["updated_at", "2025-09-16 20:33:23.380878"]]
+  ↳ app/controllers/user_books_controller.rb:29:in 'block in UserBooksController#create'
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_books_controller.rb:29:in 'block in UserBooksController#create'
+Redirected to http://127.0.0.1:3000/user_books/1
+Completed 302 Found in 754ms (ActiveRecord: 14.6ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_books/1" for 172.17.0.1 at 2025-09-16 20:33:23 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#show as TURBO_STREAM
+  Parameters: {"id" => "1"}
+  [1m[36mUserBook Load (1.1ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books" WHERE "user_books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:65:in 'UserBooksController#set_user_book'
+  [1m[36mCACHE UserBook Load (0.1ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books" WHERE "user_books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:11:in 'UserBooksController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/show.html.erb within layouts/application
+  Rendered user_books/_user_book.html.erb (Duration: 15.3ms | GC: 0.0ms)
+  Rendered user_books/show.html.erb within layouts/application (Duration: 67.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 197.6ms | GC: 0.0ms)
+Completed 200 OK in 276ms (Views: 199.3ms | ActiveRecord: 1.1ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/user_books" for 172.17.0.1 at 2025-09-16 20:33:57 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (1.1ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" DESC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:17
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 ORDER BY "books"."id" DESC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:18
+  Rendered user_books/index.html.erb within layouts/application (Duration: 25.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 162.3ms | GC: 0.0ms)
+Completed 200 OK in 190ms (Views: 160.9ms | ActiveRecord: 3.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_books/1" for 172.17.0.1 at 2025-09-16 20:34:29 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUserBook Load (1.2ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books" WHERE "user_books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:65:in 'UserBooksController#set_user_book'
+  [1m[36mCACHE UserBook Load (0.1ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books" WHERE "user_books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:11:in 'UserBooksController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/show.html.erb within layouts/application
+  Rendered user_books/_user_book.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered user_books/show.html.erb within layouts/application (Duration: 6.8ms | GC: 0.0ms)
+Started GET "/user_books" for 172.17.0.1 at 2025-09-16 20:34:29 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  Rendered layout layouts/application.html.erb (Duration: 122.6ms | GC: 0.0ms)
+Completed 200 OK in 161ms (Views: 124.2ms | ActiveRecord: 1.1ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (0.6ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" DESC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:17
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 ORDER BY "books"."id" DESC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:18
+  Rendered user_books/index.html.erb within layouts/application (Duration: 16.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 113.0ms | GC: 0.0ms)
+Completed 200 OK in 156ms (Views: 111.7ms | ActiveRecord: 2.9ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_books/1/edit" for 172.17.0.1 at 2025-09-16 20:34:30 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUserBook Load (1.0ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books" WHERE "user_books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:65:in 'UserBooksController#set_user_book'
+  [1m[36mCACHE UserBook Load (0.0ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books" WHERE "user_books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:21:in 'UserBooksController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:16:in 'Enumerable#map'
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:21:in 'Enumerable#map'
+  Rendered user_books/_form.html.erb (Duration: 18.8ms | GC: 0.0ms)
+  Rendered user_books/edit.html.erb within layouts/application (Duration: 42.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 135.7ms | GC: 0.0ms)
+Completed 200 OK in 200ms (Views: 135.4ms | ActiveRecord: 2.6ms (4 queries, 1 cached) | GC: 0.0ms)
+
+
+Started DELETE "/user_books/1" for 172.17.0.1 at 2025-09-16 20:34:31 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "1"}
+  [1m[36mUserBook Load (0.8ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books" WHERE "user_books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:65:in 'UserBooksController#set_user_book'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_books_controller.rb:54:in 'UserBooksController#destroy'
+  [1m[36mUserBook Destroy (5.3ms)[0m  [1m[31mDELETE FROM "user_books" WHERE "user_books"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/user_books_controller.rb:54:in 'UserBooksController#destroy'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_books_controller.rb:54:in 'UserBooksController#destroy'
+Redirected to http://127.0.0.1:3000/user_books
+Completed 302 Found in 67ms (ActiveRecord: 10.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_books" for 172.17.0.1 at 2025-09-16 20:34:31 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (0.7ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  Rendered user_books/index.html.erb within layouts/application (Duration: 5.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 107.9ms | GC: 0.0ms)
+Completed 200 OK in 152ms (Views: 108.4ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_books/new" for 172.17.0.1 at 2025-09-16 20:34:33 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/books" for 172.17.0.1 at 2025-09-16 20:34:33 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:16:in 'Enumerable#map'
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:21:in 'Enumerable#map'
+  Rendered user_books/_form.html.erb (Duration: 10.6ms | GC: 0.0ms)
+  Rendered user_books/new.html.erb within layouts/application (Duration: 13.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 103.2ms | GC: 0.0ms)
+Completed 200 OK in 134ms (Views: 103.8ms | ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 8.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 81.7ms | GC: 0.0ms)
+Completed 200 OK in 111ms (Views: 83.0ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_books/new" for 172.17.0.1 at 2025-09-16 20:34:37 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/new.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:16:in 'Enumerable#map'
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:21:in 'Enumerable#map'
+  Rendered user_books/_form.html.erb (Duration: 11.6ms | GC: 0.0ms)
+  Rendered user_books/new.html.erb within layouts/application (Duration: 15.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 107.5ms | GC: 0.0ms)
+Completed 200 OK in 146ms (Views: 107.7ms | ActiveRecord: 1.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 172.17.0.1 at 2025-09-16 20:34:37 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 7.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 100.6ms | GC: 0.0ms)
+Completed 200 OK in 134ms (Views: 101.3ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/1/delete" for 172.17.0.1 at 2025-09-16 20:34:39 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#delete as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:41:in 'BooksController#delete'
+  Rendering layout layouts/application.html.erb
+  Rendering books/delete.html.erb within layouts/application
+  Rendered books/delete.html.erb within layouts/application (Duration: 22.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 155.8ms | GC: 0.0ms)
+Completed 200 OK in 245ms (Views: 157.3ms | ActiveRecord: 1.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/books/1" for 172.17.0.1 at 2025-09-16 20:34:41 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "commit" => "Delete Book", "id" => "1"}
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:45:in 'BooksController#destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+  [1m[36mBook Destroy (5.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 54ms (ActiveRecord: 9.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 172.17.0.1 at 2025-09-16 20:34:41 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 10.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 167.4ms | GC: 0.0ms)
+Completed 200 OK in 227ms (Views: 170.0ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/user_books" for 172.17.0.1 at 2025-09-16 20:34:46 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (0.6ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  Rendered user_books/index.html.erb within layouts/application (Duration: 7.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 119.9ms | GC: 0.0ms)
+Completed 200 OK in 161ms (Views: 120.6ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 172.17.0.1 at 2025-09-16 20:34:47 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+Started GET "/users" for 172.17.0.1 at 2025-09-16 20:34:47 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 6.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 91.4ms | GC: 0.0ms)
+Completed 200 OK in 134ms (Views: 92.5ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 7.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 89.3ms | GC: 0.0ms)
+Completed 200 OK in 131ms (Views: 97.0ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2025-09-16 20:34:49 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in 'UsersController#set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered users/show.html.erb within layouts/application (Duration: 4.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 130.0ms | GC: 0.0ms)
+Completed 200 OK in 176ms (Views: 131.3ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/edit" for 172.17.0.1 at 2025-09-16 20:34:50 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started DELETE "/users/1" for 172.17.0.1 at 2025-09-16 20:34:51 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in 'UsersController#set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered users/edit.html.erb within layouts/application (Duration: 19.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 101.2ms | GC: 0.0ms)
+Completed 200 OK in 159ms (Views: 102.7ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in 'UsersController#set_user'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:52:in 'UsersController#destroy'
+  [1m[36mUser Destroy (4.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/users_controller.rb:52:in 'UsersController#destroy'
+  [1m[36mTRANSACTION (15.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:52:in 'UsersController#destroy'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 75ms (ActiveRecord: 21.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for 172.17.0.1 at 2025-09-16 20:34:51 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 5.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 119.6ms | GC: 14.0ms)
+Completed 200 OK in 162ms (Views: 122.0ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 14.0ms)
+
+
+Started GET "/user_books" for 172.17.0.1 at 2025-09-16 20:34:53 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (0.6ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  Rendered user_books/index.html.erb within layouts/application (Duration: 5.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 98.8ms | GC: 0.0ms)
+Completed 200 OK in 143ms (Views: 99.5ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+Started GET "/" for 172.17.0.1 at 2025-09-17 14:59:19 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (36.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 252.6ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 303.2ms | GC: 1.4ms)
+Completed 500 Internal Server Error in 1572ms (ActiveRecord: 43.7ms (1 query, 0 cached) | GC: 5.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'javascript_importmap_tags' for an instance of #<Class:0x00007b98a761f150>)
+Caused by: NameError (undefined local variable or method 'javascript_importmap_tags' for an instance of #<Class:0x00007b98a761f150>)
+
+Information for: ActionView::Template::Error (undefined local variable or method 'javascript_importmap_tags' for an instance of #<Class:0x00007b98a761f150>):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    12:   </head>
+    13: 
+  
+app/views/layouts/application.html.erb:10
+
+Information for cause: NameError (undefined local variable or method 'javascript_importmap_tags' for an instance of #<Class:0x00007b98a761f150>):
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for 172.17.0.1 at 2025-09-17 15:01:41 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 19.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 261ms (ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'javascript_importmap_tags' for an instance of #<Class:0x00007b987748ad38>)
+Caused by: NameError (undefined local variable or method 'javascript_importmap_tags' for an instance of #<Class:0x00007b987748ad38>)
+
+Information for: ActionView::Template::Error (undefined local variable or method 'javascript_importmap_tags' for an instance of #<Class:0x00007b987748ad38>):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     # <%= javascript_importmap_tags %>
+    11:     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    12:   </head>
+    13: 
+  
+app/views/layouts/application.html.erb:10
+
+Information for cause: NameError (undefined local variable or method 'javascript_importmap_tags' for an instance of #<Class:0x00007b987748ad38>):
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for 172.17.0.1 at 2025-09-17 15:01:58 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 29.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 52.6ms | GC: 0.0ms)
+Completed 200 OK in 241ms (Views: 143.6ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-17 15:01:59 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-17 15:01:59 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/user_books" for 172.17.0.1 at 2025-09-17 15:02:01 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (2.8ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  Rendered user_books/index.html.erb within layouts/application (Duration: 25.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | GC: 0.0ms)
+Completed 200 OK in 177ms (Views: 32.4ms | ActiveRecord: 2.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-17 15:02:02 +0000
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-17 15:02:02 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/user_books/new" for 172.17.0.1 at 2025-09-17 15:02:04 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/new.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:16:in 'Enumerable#map'
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:21:in 'Enumerable#map'
+  Rendered user_books/_form.html.erb (Duration: 237.4ms | GC: 0.6ms)
+  Rendered user_books/new.html.erb within layouts/application (Duration: 277.2ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 280.1ms | GC: 0.6ms)
+Completed 200 OK in 351ms (Views: 274.2ms | ActiveRecord: 43.2ms (2 queries, 0 cached) | GC: 7.5ms)
+
+
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-17 15:02:05 +0000
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-17 15:02:05 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/user_books" for 172.17.0.1 at 2025-09-17 15:02:08 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (0.6ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  Rendered user_books/index.html.erb within layouts/application (Duration: 7.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-17 15:02:09 +0000
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-17 15:02:09 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/books" for 172.17.0.1 at 2025-09-17 15:02:11 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 6.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-17 15:02:11 +0000
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-17 15:02:11 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/books/new" for 172.17.0.1 at 2025-09-17 15:02:13 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 222.2ms | GC: 3.3ms)
+  Rendered books/new.html.erb within layouts/application (Duration: 267.1ms | GC: 3.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 268.7ms | GC: 3.3ms)
+Completed 200 OK in 304ms (Views: 269.8ms | ActiveRecord: 2.1ms (0 queries, 0 cached) | GC: 3.3ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-17 15:02:14 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-17 15:02:14 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started POST "/books" for 172.17.0.1 at 2025-09-17 15:02:22 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "book" => {"title" => "test", "author" => "me", "price" => "10", "published_date(1i)" => "2025", "published_date(2i)" => "9", "published_date(3i)" => "17"}, "commit" => "Create Book"}
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:18:in 'BooksController#create'
+  [1m[36mBook Create (14.1ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "test"], ["author", "me"], ["price", "10.0"], ["published_date", "2025-09-17"], ["created_at", "2025-09-17 15:02:22.949128"], ["updated_at", "2025-09-17 15:02:22.949128"]]
+  ↳ app/controllers/books_controller.rb:18:in 'BooksController#create'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:18:in 'BooksController#create'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 46ms (ActiveRecord: 23.1ms (1 query, 0 cached) | GC: 2.1ms)
+
+
+Started GET "/books" for 172.17.0.1 at 2025-09-17 15:02:23 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 199.3ms | GC: 6.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 202.0ms | GC: 6.1ms)
+Completed 200 OK in 205ms (Views: 202.4ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 6.1ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-17 15:02:23 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-17 15:02:23 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/user_books" for 172.17.0.1 at 2025-09-17 15:02:28 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (0.5ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  Rendered user_books/index.html.erb within layouts/application (Duration: 4.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-17 15:02:28 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-17 15:02:28 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/users" for 172.17.0.1 at 2025-09-17 15:02:30 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 20.0ms | GC: 0.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | GC: 0.8ms)
+Completed 200 OK in 58ms (Views: 31.1ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-17 15:02:30 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-17 15:02:30 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/users/new" for 172.17.0.1 at 2025-09-17 15:02:33 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 13.8ms | GC: 0.0ms)
+  Rendered users/new.html.erb within layouts/application (Duration: 57.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 59.8ms | GC: 0.0ms)
+Completed 200 OK in 101ms (Views: 61.7ms | ActiveRecord: 4.8ms (0 queries, 0 cached) | GC: 1.8ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-17 15:02:34 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-17 15:02:34 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started POST "/users" for 172.17.0.1 at 2025-09-17 15:02:37 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"username" => "taylor"}, "commit" => "Create User"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27:in 'block in UsersController#create'
+  [1m[36mUser Create (4.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "taylor"], ["created_at", "2025-09-17 15:02:38.106791"], ["updated_at", "2025-09-17 15:02:38.106791"]]
+  ↳ app/controllers/users_controller.rb:27:in 'block in UsersController#create'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:27:in 'block in UsersController#create'
+Redirected to http://127.0.0.1:3000/users/2
+Completed 302 Found in 18ms (ActiveRecord: 9.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/2" for 172.17.0.1 at 2025-09-17 15:02:38 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in 'UsersController#set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 11.4ms | GC: 0.0ms)
+  Rendered users/show.html.erb within layouts/application (Duration: 81.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 85.6ms | GC: 0.0ms)
+Completed 200 OK in 188ms (Views: 86.8ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-17 15:02:38 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-17 15:02:38 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/users" for 172.17.0.1 at 2025-09-17 15:02:41 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 6.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-17 15:02:41 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-17 15:02:41 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/user_books" for 172.17.0.1 at 2025-09-17 15:02:44 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (0.6ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  Rendered user_books/index.html.erb within layouts/application (Duration: 5.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-17 15:02:44 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-17 15:02:44 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/user_books/new" for 172.17.0.1 at 2025-09-17 15:02:46 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:16:in 'Enumerable#map'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:21:in 'Enumerable#map'
+  Rendered user_books/_form.html.erb (Duration: 10.4ms | GC: 0.0ms)
+  Rendered user_books/new.html.erb within layouts/application (Duration: 14.0ms | GC: 1.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | GC: 1.2ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-17 15:02:47 +0000
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-17 15:02:47 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started POST "/user_books" for 172.17.0.1 at 2025-09-17 15:02:48 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user_book" => {"user_id" => "", "book_id" => ""}, "commit" => "Create User book"}
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/new.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:16:in 'Enumerable#map'
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:21:in 'Enumerable#map'
+  Rendered user_books/_form.html.erb (Duration: 22.6ms | GC: 0.0ms)
+  Rendered user_books/new.html.erb within layouts/application (Duration: 27.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 467ms (Views: 31.2ms | ActiveRecord: 3.2ms (2 queries, 0 cached) | GC: 3.3ms)
+
+
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-17 15:02:50 +0000
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-17 15:02:50 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started POST "/user_books" for 172.17.0.1 at 2025-09-17 15:02:53 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user_book" => {"user_id" => "2", "book_id" => "2"}, "commit" => "Create User book"}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_books_controller.rb:29:in 'block in UserBooksController#create'
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:29:in 'block in UserBooksController#create'
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:29:in 'block in UserBooksController#create'
+  [1m[36mUserBook Create (3.1ms)[0m  [1m[32mINSERT INTO "user_books" ("user_id", "book_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["book_id", 2], ["created_at", "2025-09-17 15:02:54.004102"], ["updated_at", "2025-09-17 15:02:54.004102"]]
+  ↳ app/controllers/user_books_controller.rb:29:in 'block in UserBooksController#create'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_books_controller.rb:29:in 'block in UserBooksController#create'
+Redirected to http://127.0.0.1:3000/user_books/2
+Completed 302 Found in 109ms (ActiveRecord: 14.9ms (3 queries, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/user_books/2" for 172.17.0.1 at 2025-09-17 15:02:54 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mUserBook Load (2.8ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books" WHERE "user_books"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:65:in 'UserBooksController#set_user_book'
+  [1m[36mCACHE UserBook Load (0.0ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books" WHERE "user_books"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:11:in 'UserBooksController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/show.html.erb within layouts/application
+  Rendered user_books/_user_book.html.erb (Duration: 11.5ms | GC: 0.0ms)
+  Rendered user_books/show.html.erb within layouts/application (Duration: 53.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 56.4ms | GC: 0.0ms)
+Completed 200 OK in 92ms (Views: 57.6ms | ActiveRecord: 2.8ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-17 15:02:54 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-17 15:02:54 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/user_books" for 172.17.0.1 at 2025-09-17 15:02:56 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (0.9ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" DESC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:17
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 ORDER BY "books"."id" DESC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:18
+  Rendered user_books/index.html.erb within layouts/application (Duration: 23.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 24.1ms | ActiveRecord: 4.5ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-17 15:02:57 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-17 15:02:57 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+Started GET "/" for 172.17.0.1 at 2025-09-18 00:57:24 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (36.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 219.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 233.9ms | GC: 0.0ms)
+Completed 200 OK in 698ms (Views: 238.0ms | ActiveRecord: 63.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 00:57:27 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 00:57:27 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/books/new" for 172.17.0.1 at 2025-09-18 00:57:41 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 67.3ms | GC: 0.0ms)
+  Rendered books/new.html.erb within layouts/application (Duration: 111.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 113.9ms | GC: 0.0ms)
+Completed 200 OK in 214ms (Views: 115.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 00:57:42 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 00:57:42 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/books" for 172.17.0.1 at 2025-09-18 00:57:49 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 9.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 00:57:49 +0000
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 00:57:49 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/user_books" for 172.17.0.1 at 2025-09-18 00:58:25 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (2.0ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" DESC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:17
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 ORDER BY "books"."id" DESC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:18
+  Rendered user_books/index.html.erb within layouts/application (Duration: 152.9ms | GC: 3.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 156.8ms | GC: 3.9ms)
+Completed 200 OK in 416ms (Views: 150.3ms | ActiveRecord: 14.6ms (3 queries, 0 cached) | GC: 5.4ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 00:58:26 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 00:58:26 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/users" for 172.17.0.1 at 2025-09-18 00:58:29 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 31.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | GC: 0.0ms)
+Completed 200 OK in 161ms (Views: 39.6ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 00:58:30 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 00:58:30 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/users/2" for 172.17.0.1 at 2025-09-18 00:58:32 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in 'UsersController#set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 11.6ms | GC: 0.0ms)
+  Rendered users/show.html.erb within layouts/application (Duration: 101.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 103.0ms | GC: 0.0ms)
+Completed 200 OK in 164ms (Views: 104.1ms | ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 00:58:33 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 00:58:33 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started DELETE "/users/2" for 172.17.0.1 at 2025-09-18 00:58:34 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "2"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in 'UsersController#set_user'
+  [1m[36mTRANSACTION (13.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:52:in 'UsersController#destroy'
+  [1m[36mUser Destroy (20.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/users_controller.rb:52:in 'UsersController#destroy'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:52:in 'UsersController#destroy'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 45ms (ActiveRecord: 42.2ms (2 queries, 0 cached) | GC: 2.4ms)
+
+
+Started GET "/users" for 172.17.0.1 at 2025-09-18 00:58:35 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 7.7ms | GC: 2.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | GC: 2.4ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 2.4ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 00:58:35 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 00:58:35 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/user_books" for 172.17.0.1 at 2025-09-18 00:58:37 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (0.9ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" DESC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:17
+  Rendered user_books/index.html.erb within layouts/application (Duration: 10.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'username' for nil)
+Caused by: NoMethodError (undefined method 'username' for nil)
+
+Information for: ActionView::Template::Error (undefined method 'username' for nil):
+    14:   <tbody>
+    15:     <% @user_books.each do |user_book| %>
+    16:       <tr>
+    17:         <td><%= User.where(id: user_book.user_id).last.username %></td>
+    18:         <td><%= Book.where(id: user_book.book_id).last.title %></td>
+    19:         <td><%= link_to "Show", user_book %></td>
+    20:         <td><%= link_to "Edit", edit_user_book_path(user_book) %></td>
+  
+app/views/user_books/index.html.erb:17
+app/views/user_books/index.html.erb:15
+
+Information for cause: NoMethodError (undefined method 'username' for nil):
+  
+app/views/user_books/index.html.erb:17
+app/views/user_books/index.html.erb:15
+Started GET "/books" for 172.17.0.1 at 2025-09-18 00:58:45 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 10.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 2.2ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 00:58:45 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 00:58:45 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/user_books" for 172.17.0.1 at 2025-09-18 00:58:49 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (0.6ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" DESC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:17
+  Rendered user_books/index.html.erb within layouts/application (Duration: 8.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'username' for nil)
+Caused by: NoMethodError (undefined method 'username' for nil)
+
+Information for: ActionView::Template::Error (undefined method 'username' for nil):
+    14:   <tbody>
+    15:     <% @user_books.each do |user_book| %>
+    16:       <tr>
+    17:         <td><%= User.where(id: user_book.user_id).last.username %></td>
+    18:         <td><%= Book.where(id: user_book.book_id).last.title %></td>
+    19:         <td><%= link_to "Show", user_book %></td>
+    20:         <td><%= link_to "Edit", edit_user_book_path(user_book) %></td>
+  
+app/views/user_books/index.html.erb:17
+app/views/user_books/index.html.erb:15
+
+Information for cause: NoMethodError (undefined method 'username' for nil):
+  
+app/views/user_books/index.html.erb:17
+app/views/user_books/index.html.erb:15
+Started GET "/users/new" for 172.17.0.1 at 2025-09-18 00:58:52 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 37.4ms | GC: 0.0ms)
+  Rendered users/new.html.erb within layouts/application (Duration: 144.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 146.6ms | GC: 0.0ms)
+Completed 200 OK in 224ms (Views: 148.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 00:58:53 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 00:58:53 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started POST "/users" for 172.17.0.1 at 2025-09-18 00:58:58 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"username" => "taylor"}, "commit" => "Create User"}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27:in 'block in UsersController#create'
+  [1m[36mUser Create (21.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "taylor"], ["created_at", "2025-09-18 00:58:59.312916"], ["updated_at", "2025-09-18 00:58:59.312916"]]
+  ↳ app/controllers/users_controller.rb:27:in 'block in UsersController#create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:27:in 'block in UsersController#create'
+Redirected to http://127.0.0.1:3000/users/3
+Completed 302 Found in 37ms (ActiveRecord: 25.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/3" for 172.17.0.1 at 2025-09-18 00:58:59 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in 'UsersController#set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered users/show.html.erb within layouts/application (Duration: 7.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 11.3ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 00:58:59 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 00:58:59 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/users" for 172.17.0.1 at 2025-09-18 00:59:02 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 4.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 00:59:02 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 00:59:02 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/user_books" for 172.17.0.1 at 2025-09-18 00:59:04 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (0.7ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" DESC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:17
+  Rendered user_books/index.html.erb within layouts/application (Duration: 10.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'username' for nil)
+Caused by: NoMethodError (undefined method 'username' for nil)
+
+Information for: ActionView::Template::Error (undefined method 'username' for nil):
+    14:   <tbody>
+    15:     <% @user_books.each do |user_book| %>
+    16:       <tr>
+    17:         <td><%= User.where(id: user_book.user_id).last.username %></td>
+    18:         <td><%= Book.where(id: user_book.book_id).last.title %></td>
+    19:         <td><%= link_to "Show", user_book %></td>
+    20:         <td><%= link_to "Edit", edit_user_book_path(user_book) %></td>
+  
+app/views/user_books/index.html.erb:17
+app/views/user_books/index.html.erb:15
+
+Information for cause: NoMethodError (undefined method 'username' for nil):
+  
+app/views/user_books/index.html.erb:17
+app/views/user_books/index.html.erb:15
+Started GET "/users/3" for 172.17.0.1 at 2025-09-18 00:59:35 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in 'UsersController#set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered users/show.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 00:59:36 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 00:59:36 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started DELETE "/users/3" for 172.17.0.1 at 2025-09-18 00:59:38 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "3"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in 'UsersController#set_user'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:52:in 'UsersController#destroy'
+  [1m[36mUser Destroy (9.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/users_controller.rb:52:in 'UsersController#destroy'
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:52:in 'UsersController#destroy'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 37ms (ActiveRecord: 16.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for 172.17.0.1 at 2025-09-18 00:59:39 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 12.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 00:59:39 +0000
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 00:59:39 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/books" for 172.17.0.1 at 2025-09-18 00:59:42 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 9.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 00:59:43 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 00:59:43 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/books/2/delete" for 172.17.0.1 at 2025-09-18 00:59:45 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#delete as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mBook Load (2.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:41:in 'BooksController#delete'
+  Rendering layout layouts/application.html.erb
+  Rendering books/delete.html.erb within layouts/application
+  Rendered books/delete.html.erb within layouts/application (Duration: 18.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | GC: 0.0ms)
+Completed 200 OK in 135ms (Views: 21.4ms | ActiveRecord: 2.3ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 00:59:46 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 00:59:46 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started DELETE "/books/2" for 172.17.0.1 at 2025-09-18 00:59:48 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "commit" => "Delete Book", "id" => "2"}
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:45:in 'BooksController#destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+  [1m[36mBook Destroy (3.8ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 25ms (ActiveRecord: 9.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 172.17.0.1 at 2025-09-18 00:59:48 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 5.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 1.9ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 00:59:49 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 00:59:49 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (3.6ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Great Gatsby"], ["author", "F. Scott Fitzgerald"], ["price", "10.99"], ["published_date", "2000-07-08"], ["created_at", "2025-09-18 01:16:07.441545"], ["updated_at", "2025-09-18 01:16:07.441545"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (2.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "To Kill a Mockingbird"], ["author", "Harper Lee"], ["price", "12.99"], ["published_date", "1960-01-01"], ["created_at", "2025-09-18 01:16:07.453952"], ["updated_at", "2025-09-18 01:16:07.453952"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (2.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "1984"], ["author", "George Orwell"], ["price", "14.99"], ["published_date", "1949-01-01"], ["created_at", "2025-09-18 01:16:07.464709"], ["updated_at", "2025-09-18 01:16:07.464709"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (3.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Pride and Prejudice"], ["author", "Jane Austen"], ["price", "9.99"], ["published_date", "1813-01-01"], ["created_at", "2025-09-18 01:16:07.473640"], ["updated_at", "2025-09-18 01:16:07.473640"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (2.6ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Catcher in the Rye"], ["author", "J.D. Salinger"], ["price", "11.99"], ["published_date", "1951-01-01"], ["created_at", "2025-09-18 01:16:07.484425"], ["updated_at", "2025-09-18 01:16:07.484425"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (3.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Great Gatsby"], ["author", "F. Scott Fitzgerald"], ["price", "10.99"], ["published_date", "1925-07-08"], ["created_at", "2025-09-18 01:16:55.645762"], ["updated_at", "2025-09-18 01:16:55.645762"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (2.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "To Kill a Mockingbird"], ["author", "Harper Lee"], ["price", "12.99"], ["published_date", "1960-01-01"], ["created_at", "2025-09-18 01:16:55.657851"], ["updated_at", "2025-09-18 01:16:55.657851"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (2.9ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "1984"], ["author", "George Orwell"], ["price", "14.99"], ["published_date", "1949-01-01"], ["created_at", "2025-09-18 01:16:55.667801"], ["updated_at", "2025-09-18 01:16:55.667801"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (2.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Pride and Prejudice"], ["author", "Jane Austen"], ["price", "9.99"], ["published_date", "1813-01-01"], ["created_at", "2025-09-18 01:16:55.678904"], ["updated_at", "2025-09-18 01:16:55.678904"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (3.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Catcher in the Rye"], ["author", "J.D. Salinger"], ["price", "11.99"], ["published_date", "1951-01-01"], ["created_at", "2025-09-18 01:16:55.687695"], ["updated_at", "2025-09-18 01:16:55.687695"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+Started GET "/" for 172.17.0.1 at 2025-09-18 01:21:17 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (7.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (35.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 195.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 209.7ms | GC: 0.0ms)
+Completed 200 OK in 610ms (Views: 212.2ms | ActiveRecord: 54.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 01:21:19 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 01:21:19 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/books/8/delete" for 172.17.0.1 at 2025-09-18 01:21:30 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#delete as HTML
+  Parameters: {"id" => "8"}
+  [1m[36mBook Load (3.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:41:in 'BooksController#delete'
+  Rendering layout layouts/application.html.erb
+  Rendering books/delete.html.erb within layouts/application
+  Rendered books/delete.html.erb within layouts/application (Duration: 20.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | GC: 0.0ms)
+Completed 200 OK in 69ms (Views: 25.6ms | ActiveRecord: 3.6ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 01:21:31 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 01:21:31 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started DELETE "/books/8" for 172.17.0.1 at 2025-09-18 01:21:33 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "commit" => "Delete Book", "id" => "8"}
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:45:in 'BooksController#destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+  [1m[36mBook Destroy (6.1ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 28ms (ActiveRecord: 12.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 172.17.0.1 at 2025-09-18 01:21:34 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 15.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 01:21:34 +0000
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 01:21:34 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/books/9/delete" for 172.17.0.1 at 2025-09-18 01:21:40 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#delete as HTML
+  Parameters: {"id" => "9"}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:41:in 'BooksController#delete'
+  Rendering layout layouts/application.html.erb
+  Rendering books/delete.html.erb within layouts/application
+  Rendered books/delete.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 01:21:41 +0000
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 01:21:41 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started DELETE "/books/9" for 172.17.0.1 at 2025-09-18 01:21:44 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "commit" => "Delete Book", "id" => "9"}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:45:in 'BooksController#destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+  [1m[36mBook Destroy (2.9ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+  [1m[36mTRANSACTION (21.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 38ms (ActiveRecord: 25.8ms (2 queries, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/books" for 172.17.0.1 at 2025-09-18 01:21:44 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 9.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 01:21:45 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 01:21:45 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/books/10/delete" for 172.17.0.1 at 2025-09-18 01:21:57 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#delete as HTML
+  Parameters: {"id" => "10"}
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:41:in 'BooksController#delete'
+  Rendering layout layouts/application.html.erb
+  Rendering books/delete.html.erb within layouts/application
+  Rendered books/delete.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 01:21:58 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 01:21:58 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started DELETE "/books/10" for 172.17.0.1 at 2025-09-18 01:21:59 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "commit" => "Delete Book", "id" => "10"}
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:45:in 'BooksController#destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+  [1m[36mBook Destroy (5.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 24ms (ActiveRecord: 10.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 172.17.0.1 at 2025-09-18 01:22:00 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 9.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 01:22:01 +0000
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 01:22:01 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/books/11/delete" for 172.17.0.1 at 2025-09-18 01:22:03 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#delete as HTML
+  Parameters: {"id" => "11"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:41:in 'BooksController#delete'
+  Rendering layout layouts/application.html.erb
+  Rendering books/delete.html.erb within layouts/application
+  Rendered books/delete.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 01:22:04 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 01:22:04 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started DELETE "/books/11" for 172.17.0.1 at 2025-09-18 01:22:05 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "commit" => "Delete Book", "id" => "11"}
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:45:in 'BooksController#destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+  [1m[36mBook Destroy (4.1ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 31ms (ActiveRecord: 20.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 172.17.0.1 at 2025-09-18 01:22:06 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 10.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 01:22:06 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 01:22:06 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/books/12/delete" for 172.17.0.1 at 2025-09-18 01:22:09 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#delete as HTML
+  Parameters: {"id" => "12"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:41:in 'BooksController#delete'
+  Rendering layout layouts/application.html.erb
+  Rendering books/delete.html.erb within layouts/application
+  Rendered books/delete.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 5.1ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 01:22:09 +0000
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 01:22:09 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started DELETE "/books/12" for 172.17.0.1 at 2025-09-18 01:22:11 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "commit" => "Delete Book", "id" => "12"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:45:in 'BooksController#destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+  [1m[36mBook Destroy (3.8ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 12]]
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:46:in 'BooksController#destroy'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 31ms (ActiveRecord: 19.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 172.17.0.1 at 2025-09-18 01:22:11 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 8.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-18 01:22:12 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-18 01:22:12 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+  [1m[36mUserBook Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "user_books" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCategory Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBook Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "books" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUserBook Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_books"[0m
+  [1m[36mUserBook Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_books"[0m
+  [1m[36mUserBook Load (1.2ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books" LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mBook Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  [1m[36mBook Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /csce431/book_collection/config/environment.rb:5)
+  [1m[36mUserBook Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "user_books" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBook Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "books" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUserBook Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_books"[0m
+  [1m[36mUserBook Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_books"[0m
+  [1m[36mUserBook Load (1.1ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books" LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mBook Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  [1m[36mBook Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]

@@ -1,11 +1,15 @@
-// Import and register all your controllers from the importmap under controllers/*
+import { Application } from "@hotwired/stimulus"
 
-import { application } from "controllers/application"
+const application = Application.start()
 
-// Eager load all controllers defined in the import map under controllers/**/*_controller
-import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
-eagerLoadControllersFrom("controllers", application)
+// Auto-register all controllers in this folder
+const context = require.context(".", true, /_controller\.js$/)
+context.keys().forEach((key) => {
+  if (key === "./index.js") return
+  application.register(
+    key.replace("./", "").replace("_controller.js", ""),
+    context(key).default
+  )
+})
 
-// Lazy load controllers as they appear in the DOM (remember not to preload controllers in import map!)
-// import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
-// lazyLoadControllersFrom("controllers", application)
+export { application }

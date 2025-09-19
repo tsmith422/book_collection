@@ -22,7 +22,7 @@
       <td><%= book.title %></td>
       <td><%= book.author %></td>
       <td><%= number_to_currency(book.price) %></td>
-      <td><%= book.published_date %></td>
+      <td><%= book.published_date.strftime("%B %d, %Y") %></td>
       <td class="actions">
         <%= link_to("Show", book_path(book), class: 'action show') %>
         <%= link_to("Edit", edit_book_path(book), class: 'action edit') %>

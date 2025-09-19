@@ -10027,3 +10027,952 @@ DEPRECATION WARNING: `to_time` will always preserve the full timezone rather tha
   [1m[36mBook Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
   [1m[36mBook Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
   [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+Started GET "/" for 172.17.0.1 at 2025-09-19 15:59:16 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (38.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 448.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 468.6ms | GC: 0.0ms)
+Completed 200 OK in 1673ms (Views: 611.6ms | ActiveRecord: 67.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 15:59:21 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 15:59:21 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/user_books" for 172.17.0.1 at 2025-09-19 15:59:26 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (1.7ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" DESC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:17
+  Rendered user_books/index.html.erb within layouts/application (Duration: 161.0ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 162.2ms | GC: 0.1ms)
+Completed 500 Internal Server Error in 332ms (ActiveRecord: 11.7ms (2 queries, 0 cached) | GC: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method 'username' for nil)
+Caused by: NoMethodError (undefined method 'username' for nil)
+
+Information for: ActionView::Template::Error (undefined method 'username' for nil):
+    14:   <tbody>
+    15:     <% @user_books.each do |user_book| %>
+    16:       <tr>
+    17:         <td><%= User.where(id: user_book.user_id).last.username %></td>
+    18:         <td><%= Book.where(id: user_book.book_id).last.title %></td>
+    19:         <td><%= link_to "Show", user_book %></td>
+    20:         <td><%= link_to "Edit", edit_user_book_path(user_book) %></td>
+  
+app/views/user_books/index.html.erb:17
+app/views/user_books/index.html.erb:15
+
+Information for cause: NoMethodError (undefined method 'username' for nil):
+  
+app/views/user_books/index.html.erb:17
+app/views/user_books/index.html.erb:15
+Started GET "/books/3" for 172.17.0.1 at 2025-09-19 15:59:54 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mBook Load (4.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:9:in 'BooksController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 21.2ms | GC: 1.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | GC: 2.6ms)
+Completed 200 OK in 61ms (Views: 26.4ms | ActiveRecord: 4.4ms (1 query, 0 cached) | GC: 5.5ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 15:59:54 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 15:59:54 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/books" for 172.17.0.1 at 2025-09-19 15:59:57 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 11.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 15:59:57 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 15:59:57 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/books/3/edit" for 172.17.0.1 at 2025-09-19 15:59:59 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#edit as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:27:in 'BooksController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 257.9ms | GC: 0.6ms)
+  Rendered books/edit.html.erb within layouts/application (Duration: 290.5ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 293.0ms | GC: 0.6ms)
+Completed 200 OK in 317ms (Views: 294.1ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:00:00 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:00:00 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/books" for 172.17.0.1 at 2025-09-19 16:00:02 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 8.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:00:02 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:00:02 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/" for 172.17.0.1 at 2025-09-19 16:02:25 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (39.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 216.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 234.1ms | GC: 0.0ms)
+Completed 200 OK in 650ms (Views: 229.1ms | ActiveRecord: 56.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:02:27 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:02:27 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/user_books" for 172.17.0.1 at 2025-09-19 16:02:29 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (1.2ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" DESC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:17
+  Rendered user_books/index.html.erb within layouts/application (Duration: 105.2ms | GC: 0.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 108.2ms | GC: 0.8ms)
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 10.9ms (2 queries, 0 cached) | GC: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method 'username' for nil)
+Caused by: NoMethodError (undefined method 'username' for nil)
+
+Information for: ActionView::Template::Error (undefined method 'username' for nil):
+    14:   <tbody>
+    15:     <% @user_books.each do |user_book| %>
+    16:       <tr>
+    17:         <td><%= User.where(id: user_book.user_id).last.username %></td>
+    18:         <td><%= Book.where(id: user_book.book_id).last.title %></td>
+    19:         <td><%= link_to "Show", user_book %></td>
+    20:         <td><%= link_to "Edit", edit_user_book_path(user_book) %></td>
+  
+app/views/user_books/index.html.erb:17
+app/views/user_books/index.html.erb:15
+
+Information for cause: NoMethodError (undefined method 'username' for nil):
+  
+app/views/user_books/index.html.erb:17
+app/views/user_books/index.html.erb:15
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public[0m
+  [1m[35m (188.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "task_manager_development"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mSET search_path TO public[0m
+  [1m[35m (121.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "task_manager_test"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public[0m
+  [1m[35m (279.9ms)[0m  [1m[35mCREATE DATABASE "task_manager_development" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mSET search_path TO public[0m
+  [1m[35m (171.4ms)[0m  [1m[35mCREATE DATABASE "task_manager_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (56.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "author" character varying, "price" decimal, "published_date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" bigserial primary key, "name" character varying, "description" text, "position" integer, "completed" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "category_id" integer)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_books" CASCADE[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "user_books" ("id" bigserial primary key, "user_id" integer, "book_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250916004937)[0m
+  [1m[35m (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250916004643),
+(20250909170518),
+(20220425152933),
+(20220425152907),
+(20220422190749),
+(20220422190648);[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (4.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-19 16:04:28.173016', '2025-09-19 16:04:28.173020') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (4.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'c008a8aadee98b20f25ac23a27f158f1e52bb52a', '2025-09-19 16:04:28.189110', '2025-09-19 16:04:28.189114') RETURNING "key"[0m
+  [1m[35mSQL (39.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "author" character varying, "price" decimal, "published_date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks" CASCADE[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" bigserial primary key, "name" character varying, "description" text, "position" integer, "completed" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "category_id" integer)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_books" CASCADE[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "user_books" ("id" bigserial primary key, "user_id" integer, "book_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250916004937)[0m
+  [1m[35m (3.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250916004643),
+(20250909170518),
+(20220425152933),
+(20220425152907),
+(20220422190749),
+(20220422190648);[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (4.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-19 16:04:28.373929', '2025-09-19 16:04:28.373933') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (2.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-19 16:04:28.389150' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (2.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'c008a8aadee98b20f25ac23a27f158f1e52bb52a', '2025-09-19 16:04:28.395522', '2025-09-19 16:04:28.395525') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (3.9ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Great Gatsby"], ["author", "F. Scott Fitzgerald"], ["price", "10.99"], ["published_date", "2000-07-08"], ["created_at", "2025-09-19 16:04:28.776097"], ["updated_at", "2025-09-19 16:04:28.776097"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (2.9ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "To Kill a Mockingbird"], ["author", "Harper Lee"], ["price", "12.99"], ["published_date", "1960-01-01"], ["created_at", "2025-09-19 16:04:28.788695"], ["updated_at", "2025-09-19 16:04:28.788695"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (3.0ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "1984"], ["author", "George Orwell"], ["price", "14.99"], ["published_date", "1949-01-01"], ["created_at", "2025-09-19 16:04:28.798519"], ["updated_at", "2025-09-19 16:04:28.798519"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (3.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Pride and Prejudice"], ["author", "Jane Austen"], ["price", "9.99"], ["published_date", "1813-01-01"], ["created_at", "2025-09-19 16:04:28.807918"], ["updated_at", "2025-09-19 16:04:28.807918"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (4.0ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Catcher in the Rye"], ["author", "J.D. Salinger"], ["price", "11.99"], ["published_date", "1951-01-01"], ["created_at", "2025-09-19 16:04:28.820492"], ["updated_at", "2025-09-19 16:04:28.820492"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (4.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "alice"], ["created_at", "2025-09-19 16:04:28.907546"], ["updated_at", "2025-09-19 16:04:28.907546"]]
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (4.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "bob"], ["created_at", "2025-09-19 16:04:28.923837"], ["updated_at", "2025-09-19 16:04:28.923837"]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (3.1ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Great Gatsby"], ["author", "F. Scott Fitzgerald"], ["price", "10.99"], ["published_date", "2000-07-08"], ["created_at", "2025-09-19 16:04:52.283264"], ["updated_at", "2025-09-19 16:04:52.283264"]]
+  [1m[36mTRANSACTION (15.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (2.7ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "To Kill a Mockingbird"], ["author", "Harper Lee"], ["price", "12.99"], ["published_date", "1960-01-01"], ["created_at", "2025-09-19 16:04:52.309514"], ["updated_at", "2025-09-19 16:04:52.309514"]]
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (3.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "1984"], ["author", "George Orwell"], ["price", "14.99"], ["published_date", "1949-01-01"], ["created_at", "2025-09-19 16:04:52.324764"], ["updated_at", "2025-09-19 16:04:52.324764"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (2.7ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Pride and Prejudice"], ["author", "Jane Austen"], ["price", "9.99"], ["published_date", "1813-01-01"], ["created_at", "2025-09-19 16:04:52.336066"], ["updated_at", "2025-09-19 16:04:52.336066"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (3.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Catcher in the Rye"], ["author", "J.D. Salinger"], ["price", "11.99"], ["published_date", "1951-01-01"], ["created_at", "2025-09-19 16:04:52.347231"], ["updated_at", "2025-09-19 16:04:52.347231"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (3.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "alice"], ["created_at", "2025-09-19 16:04:52.400972"], ["updated_at", "2025-09-19 16:04:52.400972"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (2.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "bob"], ["created_at", "2025-09-19 16:04:52.414783"], ["updated_at", "2025-09-19 16:04:52.414783"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[35mSET search_path TO public[0m
+  [1m[35m (1134.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "task_manager_development"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public[0m
+  [1m[35m (86.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "task_manager_test"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mSET search_path TO public[0m
+  [1m[35m (98.7ms)[0m  [1m[35mCREATE DATABASE "task_manager_development" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mSET search_path TO public[0m
+  [1m[35m (97.3ms)[0m  [1m[35mCREATE DATABASE "task_manager_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (34.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "author" character varying, "price" decimal, "published_date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks" CASCADE[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" bigserial primary key, "name" character varying, "description" text, "position" integer, "completed" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "category_id" integer)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_books" CASCADE[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "user_books" ("id" bigserial primary key, "user_id" integer, "book_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (8.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250916004937)[0m
+  [1m[35m (12.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250916004643),
+(20250909170518),
+(20220425152933),
+(20220425152907),
+(20220422190749),
+(20220422190648);[0m
+  [1m[35m (27.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (9.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-19 16:05:18.315874', '2025-09-19 16:05:18.315881') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (8.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'c008a8aadee98b20f25ac23a27f158f1e52bb52a', '2025-09-19 16:05:18.464782', '2025-09-19 16:05:18.464787') RETURNING "key"[0m
+  [1m[35mSQL (40.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "author" character varying, "price" decimal, "published_date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks" CASCADE[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" bigserial primary key, "name" character varying, "description" text, "position" integer, "completed" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "category_id" integer)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_books" CASCADE[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "user_books" ("id" bigserial primary key, "user_id" integer, "book_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250916004937)[0m
+  [1m[35m (3.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250916004643),
+(20250909170518),
+(20220425152933),
+(20220425152907),
+(20220422190749),
+(20220422190648);[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (4.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-19 16:05:18.780217', '2025-09-19 16:05:18.780222') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (4.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-19 16:05:18.802458' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (4.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'c008a8aadee98b20f25ac23a27f158f1e52bb52a', '2025-09-19 16:05:18.815289', '2025-09-19 16:05:18.815294') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (3.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Great Gatsby"], ["author", "F. Scott Fitzgerald"], ["price", "10.99"], ["published_date", "2000-07-08"], ["created_at", "2025-09-19 16:05:19.313367"], ["updated_at", "2025-09-19 16:05:19.313367"]]
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (2.9ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "To Kill a Mockingbird"], ["author", "Harper Lee"], ["price", "12.99"], ["published_date", "1960-01-01"], ["created_at", "2025-09-19 16:05:19.329510"], ["updated_at", "2025-09-19 16:05:19.329510"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (3.0ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "1984"], ["author", "George Orwell"], ["price", "14.99"], ["published_date", "1949-01-01"], ["created_at", "2025-09-19 16:05:19.340163"], ["updated_at", "2025-09-19 16:05:19.340163"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (3.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Pride and Prejudice"], ["author", "Jane Austen"], ["price", "9.99"], ["published_date", "1813-01-01"], ["created_at", "2025-09-19 16:05:19.350048"], ["updated_at", "2025-09-19 16:05:19.350048"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (2.6ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Catcher in the Rye"], ["author", "J.D. Salinger"], ["price", "11.99"], ["published_date", "1951-01-01"], ["created_at", "2025-09-19 16:05:19.360601"], ["updated_at", "2025-09-19 16:05:19.360601"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (3.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "alice"], ["created_at", "2025-09-19 16:05:19.409554"], ["updated_at", "2025-09-19 16:05:19.409554"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (3.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "bob"], ["created_at", "2025-09-19 16:05:19.422578"], ["updated_at", "2025-09-19 16:05:19.422578"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/user_books" for 172.17.0.1 at 2025-09-19 16:05:46 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (34.1ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  Rendered user_books/index.html.erb within layouts/application (Duration: 117.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 139.1ms | GC: 0.0ms)
+Completed 200 OK in 567ms (Views: 156.5ms | ActiveRecord: 39.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:05:48 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:05:48 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/books" for 172.17.0.1 at 2025-09-19 16:05:50 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 125.1ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 128.9ms | GC: 2.1ms)
+Completed 200 OK in 221ms (Views: 129.5ms | ActiveRecord: 11.3ms (1 query, 0 cached) | GC: 2.1ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:05:51 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:05:51 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/user_books" for 172.17.0.1 at 2025-09-19 16:05:53 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (2.9ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  Rendered user_books/index.html.erb within layouts/application (Duration: 30.1ms | GC: 20.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 32.3ms | GC: 20.6ms)
+Completed 200 OK in 35ms (Views: 30.6ms | ActiveRecord: 2.8ms (1 query, 0 cached) | GC: 20.6ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:05:54 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:05:54 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/users" for 172.17.0.1 at 2025-09-19 16:05:55 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 36.3ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 39.7ms | GC: 0.9ms)
+Completed 200 OK in 121ms (Views: 42.7ms | ActiveRecord: 5.4ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:05:56 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:05:56 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/books" for 172.17.0.1 at 2025-09-19 16:05:58 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 9.4ms | GC: 1.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | GC: 1.0ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:05:59 +0000
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:05:59 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35mSQL (0.7ms)[0m  [1m[35mSET search_path TO public[0m
+  [1m[35m (1496.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "task_manager_development"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mSET search_path TO public[0m
+  [1m[35m (96.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "task_manager_test"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public[0m
+  [1m[35m (116.8ms)[0m  [1m[35mCREATE DATABASE "task_manager_development" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public[0m
+  [1m[35m (123.4ms)[0m  [1m[35mCREATE DATABASE "task_manager_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (40.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "author" character varying, "price" decimal, "published_date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks" CASCADE[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" bigserial primary key, "name" character varying, "description" text, "position" integer, "completed" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "category_id" integer)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_books" CASCADE[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "user_books" ("id" bigserial primary key, "user_id" integer, "book_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250916004937)[0m
+  [1m[35m (2.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250916004643),
+(20250909170518),
+(20220425152933),
+(20220425152907),
+(20220422190749),
+(20220422190648);[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (3.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-19 16:07:20.747612', '2025-09-19 16:07:20.747616') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (2.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'c008a8aadee98b20f25ac23a27f158f1e52bb52a', '2025-09-19 16:07:20.760545', '2025-09-19 16:07:20.760548') RETURNING "key"[0m
+  [1m[35mSQL (32.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "author" character varying, "price" decimal, "published_date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks" CASCADE[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" bigserial primary key, "name" character varying, "description" text, "position" integer, "completed" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "category_id" integer)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_books" CASCADE[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "user_books" ("id" bigserial primary key, "user_id" integer, "book_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250916004937)[0m
+  [1m[35m (3.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250916004643),
+(20250909170518),
+(20220425152933),
+(20220425152907),
+(20220422190749),
+(20220422190648);[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (2.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-19 16:07:20.908642', '2025-09-19 16:07:20.908645') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (2.9ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-19 16:07:20.919627' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (2.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'c008a8aadee98b20f25ac23a27f158f1e52bb52a', '2025-09-19 16:07:20.927866', '2025-09-19 16:07:20.927869') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (2.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Great Gatsby"], ["author", "F. Scott Fitzgerald"], ["price", "10.99"], ["published_date", "2000-07-08"], ["created_at", "2025-09-19 16:07:21.284814"], ["updated_at", "2025-09-19 16:07:21.284814"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (3.1ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "To Kill a Mockingbird"], ["author", "Harper Lee"], ["price", "12.99"], ["published_date", "1960-01-01"], ["created_at", "2025-09-19 16:07:21.297708"], ["updated_at", "2025-09-19 16:07:21.297708"]]
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (2.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "1984"], ["author", "George Orwell"], ["price", "14.99"], ["published_date", "1949-01-01"], ["created_at", "2025-09-19 16:07:21.310382"], ["updated_at", "2025-09-19 16:07:21.310382"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (2.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Pride and Prejudice"], ["author", "Jane Austen"], ["price", "9.99"], ["published_date", "1813-01-01"], ["created_at", "2025-09-19 16:07:21.319842"], ["updated_at", "2025-09-19 16:07:21.319842"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (3.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Catcher in the Rye"], ["author", "J.D. Salinger"], ["price", "11.99"], ["published_date", "1951-01-01"], ["created_at", "2025-09-19 16:07:21.331169"], ["updated_at", "2025-09-19 16:07:21.331169"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (4.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "alice"], ["created_at", "2025-09-19 16:07:21.384779"], ["updated_at", "2025-09-19 16:07:21.384779"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (3.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "bob"], ["created_at", "2025-09-19 16:07:21.397455"], ["updated_at", "2025-09-19 16:07:21.397455"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/books" for 172.17.0.1 at 2025-09-19 16:07:51 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (33.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 194.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 210.5ms | GC: 0.0ms)
+Completed 200 OK in 595ms (Views: 213.7ms | ActiveRecord: 47.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:07:53 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:07:53 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/books/1" for 172.17.0.1 at 2025-09-19 16:07:58 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:9:in 'BooksController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 16.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | GC: 0.0ms)
+Completed 200 OK in 65ms (Views: 21.5ms | ActiveRecord: 1.6ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:07:58 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:07:58 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/books" for 172.17.0.1 at 2025-09-19 16:08:01 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 9.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:08:02 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:08:02 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/books/1" for 172.17.0.1 at 2025-09-19 16:11:08 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:9:in 'BooksController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 5.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | GC: 0.0ms)
+Completed 200 OK in 27ms (Views: 18.3ms | ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:11:09 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:11:09 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/books" for 172.17.0.1 at 2025-09-19 16:11:12 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 10.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:11:12 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:11:12 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/books/1" for 172.17.0.1 at 2025-09-19 16:11:15 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:9:in 'BooksController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 7.2ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:11:15 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:11:15 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/books/1" for 172.17.0.1 at 2025-09-19 16:11:20 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:9:in 'BooksController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 19.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 41.6ms | GC: 0.0ms)
+Completed 200 OK in 316ms (Views: 81.5ms | ActiveRecord: 8.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:11:22 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:11:22 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/books/1" for 172.17.0.1 at 2025-09-19 16:12:30 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:9:in 'BooksController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 30.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.7ms | GC: 0.0ms)
+Completed 200 OK in 288ms (Views: 82.4ms | ActiveRecord: 4.0ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:12:32 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:12:32 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/books" for 172.17.0.1 at 2025-09-19 16:12:37 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 32.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | GC: 0.0ms)
+Completed 200 OK in 60ms (Views: 35.1ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:12:37 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:12:37 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/books/1/edit" for 172.17.0.1 at 2025-09-19 16:17:11 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBook Load (2.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:27:in 'BooksController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 217.9ms | GC: 2.5ms)
+  Rendered books/edit.html.erb within layouts/application (Duration: 262.4ms | GC: 2.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 265.2ms | GC: 2.5ms)
+Completed 200 OK in 294ms (Views: 266.8ms | ActiveRecord: 2.4ms (1 query, 0 cached) | GC: 2.5ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:17:12 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:17:12 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/books" for 172.17.0.1 at 2025-09-19 16:17:14 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 24.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | GC: 0.0ms)
+Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:17:15 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:17:15 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/books" for 172.17.0.1 at 2025-09-19 16:19:24 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (3.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 86.3ms | GC: 4.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 116.9ms | GC: 4.3ms)
+Completed 200 OK in 520ms (Views: 148.7ms | ActiveRecord: 19.0ms (1 query, 0 cached) | GC: 8.9ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:19:27 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:19:27 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/user_books" for 172.17.0.1 at 2025-09-19 16:19:33 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (18.4ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:15
+  Rendered user_books/index.html.erb within layouts/application (Duration: 42.8ms | GC: 1.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | GC: 1.4ms)
+Completed 200 OK in 129ms (Views: 35.6ms | ActiveRecord: 18.2ms (1 query, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:19:34 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:19:34 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/users" for 172.17.0.1 at 2025-09-19 16:19:36 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 37.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | GC: 0.0ms)
+Completed 200 OK in 103ms (Views: 37.4ms | ActiveRecord: 8.9ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:19:36 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:19:36 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+Started GET "/books" for 172.17.0.1 at 2025-09-19 16:19:39 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19:in 'Enumerable#each_with_index'
+  Rendered books/index.html.erb within layouts/application (Duration: 9.9ms | GC: 1.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | GC: 1.2ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/stylesheets/application.css" for 172.17.0.1 at 2025-09-19 16:19:39 +0000
+Started GET "/javascripts/application.js" for 172.17.0.1 at 2025-09-19 16:19:39 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  

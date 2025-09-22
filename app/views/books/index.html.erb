@@ -5,7 +5,14 @@
 <% end %>
 
 <div class="books index">
+  <p style="color: green"><%= notice %></p> 
+
   <h2>Books</h2>
+  <h1>This is the authenticated version 2</h1>
+
+  <h1>You are logged in! Welcome to the Dashboard!</h1>
+  <%= link_to "Sign Out", destroy_admin_session_path %>
+  <br><br>
   <%= link_to("Add New Book", new_book_path, class: 'action new') %>
   <table class="listing" summary="Book list" style="width: 100%;">
     <tr class="header">

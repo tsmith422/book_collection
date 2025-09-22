@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "books#index"
+
   root to: 'dashboards#show'
   
   devise_for :admins, controllers: { omniauth_callbacks: 'admins/omniauth_callbacks' }
@@ -9,7 +11,6 @@ Rails.application.routes.draw do
 
   resources :user_books
   resources :users
-  root "books#index"
 
   resources :books do
     member do

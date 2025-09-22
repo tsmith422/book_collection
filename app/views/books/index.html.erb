@@ -1,16 +1,12 @@
 <%= link_to('Back to Homepage', {controller: 'user_books', action: 'index'}) %><br />
 
-<% flash.each do |key, message| %>
-  <div class="flash <%= key %>"><%= message %></div>
-<% end %>
-
 <div class="books index">
   <p style="color: green"><%= notice %></p> 
 
   <h2>Books</h2>
-  <h1>This is the authenticated version 2</h1>
+  <h3>This is the authenticated version 2</h3>
 
-  <h1>You are logged in! Welcome to the Dashboard!</h1>
+  <h3>You are logged in! Welcome to the Dashboard!</h3>
   <%= link_to "Sign Out", destroy_admin_session_path %>
   <br><br>
   <%= link_to("Add New Book", new_book_path, class: 'action new') %>

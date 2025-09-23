@@ -23,7 +23,7 @@
     </tr>
     <tr>
       <th>Published Date</th>
-      <td><%= @book.published_date %></td>
+      <td><%= @book.published_date.strftime("%B %d, %Y") %></td>
     </tr>
     <tr>
       <th>Created</th>
